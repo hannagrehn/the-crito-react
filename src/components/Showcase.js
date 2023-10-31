@@ -15,7 +15,7 @@ const Showcase = () => {
             <a className="btn-yellow" href="consulting.html">Get Consulting<i className="fa-regular fa-arrow-up-right"></i></a>
             <a className="btn-transparent" href="services.html">Learn More<i className="fa-regular fa-arrow-up-right"></i></a>
         </div>
-        <img src={showcase} alt="image of a man with a tablet"/>
+        <img src={showcase} alt="a man with a tablet"/>
     </div>
     </section>
   )
