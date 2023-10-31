@@ -8,14 +8,15 @@ import Map from '../components/Map'
 
 const Contact = () => {
   return (
-    <div>
+    <>
       <Header/> 
       <LetsConnect/>
       <Cards/>
       <LeaveUs/>
       <Map/>
       <Footer/>
-    </div>
+
+    </>
   )
 }
 

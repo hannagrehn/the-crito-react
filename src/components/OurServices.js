@@ -19,7 +19,7 @@ const OurServices = () => {
                 <h3>Business Advice</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                 <div>
-                    <button className="btn-arrow"><i className="fa-solid fa-arrow-right"></i></button>
+                    <button className="btn-arrow"><i class="fa-thin fa-arrow-right"></i></button>
                 </div>
             </div>
             <div className="card active">
@@ -27,7 +27,7 @@ const OurServices = () => {
                 <h3>Startup Business</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                 <div>
-                    <button className="btn-arrow"><i className="fa-solid fa-arrow-right"></i></button>
+                    <button className="btn-arrow"><i class="fa-thin fa-arrow-right"></i></button>
                 </div>
             </div>
             <div className="card">
@@ -35,7 +35,7 @@ const OurServices = () => {
                 <h3>Financial Advice</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                 <div>
-                    <button className="btn-arrow"><i className="fa-solid fa-arrow-right"></i></button>
+                    <button className="btn-arrow"><i class="fa-thin fa-arrow-right"></i></button>
                 </div>
             </div>
             <div className="card">
@@ -43,12 +43,12 @@ const OurServices = () => {
                 <h3>Risk Management</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
                 <div>
-                    <button className="btn-arrow"><i className="fa-solid fa-arrow-right"></i></button>
+                    <button className="btn-arrow"><i className="fa-thin fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
         <div className="btn-browse">
-            <button className="btn-transparent"><span>Browse Services</span><i className="fa-thin fa-arrow-up-right"></i></button>
+            <button className="btn-transparent"><span>Browse Services</span><i className="fa-regular fa-arrow-up-right"></i></button>
         </div>
     </div>
 </section>
