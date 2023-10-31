@@ -4,6 +4,8 @@ import Footer from '../components/Footer'
 import Showcase from '../components/Showcase'
 import Partners from '../components/Partners'
 import Features from '../components/Features'
+import About from '../components/About'
+import OurServices from '../components/OurServices'
 
 const Hem = () => {
   return (
@@ -12,6 +14,8 @@ const Hem = () => {
     < Showcase />
     < Partners />
     < Features />
+    < About />
+    < OurServices />
 
 
     < Footer />
