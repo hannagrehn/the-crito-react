@@ -197,30 +197,65 @@ header .container .menu-bars {
   }
 }
 
-/* HÄR ÄR DET DÄR NYA  */
 
-header .container .nav{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0.98;
-  background-color: #191919;
 
+@media (max-width: 992px) {
+  /* Hide the default menu */
+  .menu {
+    display: none;
+  }
+
+  /* Style the hamburger button */
+  .btn-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #191919;
+    font-size: 30px;
+  }
+
+  /* Style the active hamburger button (when menu is open) */
+  .btn-menu.active {
+    color: #f94d1c; /* Active state text color */
+  }
+
+  /* Style the menu that appears when the hamburger is clicked */
+  nav {
+    display: block;
+    background: #333; /* Background color */
+    position: absolute;
+    font-size: 25px;
+    top: 80px; 
+    left: 0;
+    right: 0;
+    z-index: 1; /* Ensure it's above other content */
+    opacity: 0.9;
+    transition: 1s;
+  }
+
+  /* Style the links within the hamburger menu */
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+  }
+
+  nav ul li a.active {
+    font-weight: 900;    
+  }
 }
 
-header .container .nav .ul{
-  padding: 0;
-  margin-top: 85px;
-  list-style: none;
-  width: 100%;
-  color: #ffffff;
-  border-top: 1px solid #191919;
-}
+/*  */
 
-header .container .nav .ul .li{
-  color: #ffffff;
-}
 
 header .container .menu {
   display: none;

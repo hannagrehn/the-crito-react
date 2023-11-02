@@ -7,8 +7,8 @@ import gobana from './images/gobona.svg'
 
 const Partners = () => {
   return (
-    <section class="partners">
-        <div class="content">
+    <section className="partners">
+        <div className="content">
             <a target="_blank" href="https://paperz.com"><img src={paperz}/></a>
             <a target="_blank" href="https://dorfus.com"><img src={dorfus}/></a>
             <a target="_blank" href="https://martino.com"><img src={martino}/></a>
