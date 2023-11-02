@@ -1,106 +1,114 @@
+
 import React, { useState } from 'react';
 
 const LeaveUs = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [nameError, setNameError] = useState('');
-  const [emailError, setEmailError] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [apiMessage, setApiMessage] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+    const handleNameChange = (e) => {
+        const newName = e.target.value;
+        setName(newName);
 
-    setNameError('');
-    setEmailError('');
+        
+        if (newName.trim().length >= 2) {
+            setNameError('');
+        } else {
+            setNameError('Name must be at least 2 characters long');
+        }
+    };
 
-    let isValid = true;
+    const handleEmailChange = (e) => {
+        const newEmail = e.target.value;
+        setEmail(newEmail);
 
-    if (name === '') {
-      setNameError('Name is required');
-      isValid = false;
-    }
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (emailPattern.test(newEmail)) {
+            setEmailError('');
+        } else {
+            setEmailError('Enter a valid email address');
+        }
+    };
 
-    if (email === '' || !isValidEmail(email)) {
-      setEmailError('Please enter a valid email');
-      isValid = false;
-    }
+    const handleSubmit = async () => {
+        
+        if (name.trim().length >= 2 && emailError === '') {
 
-    if (isValid) {
-      const data = {
-        name: name,
-        email: email,
-        message: message,
-      };
+            try {
+                const response = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, message }),
+                });
 
-      fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => {
-          if (response.status === 200) {
-            alert('Message sent!');
-          } else {
-            alert('Message failed to send. Please try again.');
-          }
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-    }
-  };
+                if (response.status === 200) {
+                    
+                    setApiMessage('Message sent!');
+                } else {
+                   
+                    setApiMessage('Message not sent, API error :(');
+                }
+            } catch (error) {
+                
+                setApiMessage('Message not sent, Network error :(');
+            }
 
-  const isValidEmail = (email) => {
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    return emailRegex.test(email);
-  };
+            setName('');
+            setEmail('');
+            setMessage('');
+            
+        } else {
+            
+            setApiMessage('Form not submitted - Please enter correct information');
+        }
+    };
 
-  return (
-    <section className="leave-us">
-      <div className="container">
-        <div className="section-title">
-          <h2>Leave us a message<br />for any information.</h2>
-        </div>
-        <div className="content">
-          <form id="leave-us-form" onSubmit={handleSubmit}>
-            <div className="form">
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Name*"
-              />
-              <span className="error">{nameError}</span>
+    return (
+        <section className="leave-us">
+            <div className="container">
+                <div className="section-title">
+                    <h2>Leave us a message<br />for any information.</h2>
+                </div>
+                <div className="content">
+                    {apiMessage && <p className="api-message">{apiMessage}</p>}
+                    <div className="form">
+                        <input
+                            type="text"
+                            placeholder="Name*"
+                            value={name}
+                            onChange={handleNameChange}
+                        />
+                        {nameError && <p className="error-message">{nameError}</p>}
+                    </div>
+                    <div className="form">
+                        <input
+                            type="text"
+                            placeholder="Email*"
+                            value={email}
+                            onChange={handleEmailChange}
+                        />
+                        {emailError && <p className="error-message">{emailError}</p>}
+                    </div>
+                    <div className="message-form">
+                        <input
+                            type="text"
+                            placeholder="Your Message*"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
+                    </div>
+                    <button className="btn-yellow" onClick={handleSubmit}>
+                        Send Message<i className="fa-regular fa-arrow-up-right"></i>
+                    </button>
+                </div>
             </div>
-            <div className="form">
-              <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email*"
-              />
-              <span className="error">{emailError}</span>
-            </div>
-            <div className="message-form">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Your Message*"
-              />
-            </div>
-            <button className="btn-yellow" type="submit">
-              Send Message
-              <i className="fa-regular fa-arrow-up-right"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default LeaveUs;
-
