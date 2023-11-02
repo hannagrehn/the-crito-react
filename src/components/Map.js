@@ -1,14 +1,12 @@
 import React from 'react'
 
+
 const Map = () => {
   return (
-    
-    <section className="map container">
-        <h1>Insert map here</h1>
-        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.7872519577923!2d18.060111496017463!3d59.33650568059714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6799554e87%3A0x6562d2c842903003!2sSveav%C3%A4gen%2031%2C%20111%2034%20Stockholm!5e0!3m2!1sen!2sse!4v1695386818138!5m2!1sen!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-    </section> 
-    
-  )
-}
+      <section className="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4069.542053612453!2d18.065371455927306!3d59.33677655604658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e001d880a3%3A0x2c29d3c569e23670!2sNorrmalm%2C%20Stockholm!5e0!3m2!1ssv!2sse!4v1695817498831!5m2!1ssv!2sse" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+  );
+};
 
 export default Map
