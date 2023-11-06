@@ -8,6 +8,7 @@ import Contact from './views/Contact';
 import Service from './views/Service';
 import News from './views/News';
 import NotFound from './views/NotFound';
+import NewsDetails from './views/NewsDetails';
 
 
 
@@ -20,6 +21,7 @@ root.render(
         <Route path='/Contact' element={ <Contact />} />
         <Route path='Service' element={ <Service/>} />
         <Route path= '/News' element= { <News />} />
+        <Route path= 'NewsDetails' element= {<NewsDetails/>} />
         <Route path= '/*' element={ <NotFound />} />
       </Routes>
     </BrowserRouter>

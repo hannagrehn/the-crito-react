@@ -32,7 +32,7 @@ const OurNews = () => {
         <div className="article-and-news-grid">
           {articles.map((article, index) => (
             <NewsCard
-              key={article.id} // Assuming each article has a unique "id"
+              key={article.id} 
               date={{ day: new Date(article.published).getDate(), month: new Date(article.published).toLocaleString('default', { month: 'short' }) }}
               imageSrc={article.imageUrl}
               category={article.category}
