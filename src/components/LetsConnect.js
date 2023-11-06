@@ -17,7 +17,7 @@ const LetsConnect = () => {
         <img src={lines}/>
     </div>
     </section>
-  )
+  ) 
 }
 
 export default LetsConnect

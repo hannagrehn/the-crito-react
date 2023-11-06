@@ -1,39 +1,55 @@
-import React from 'react'
+import React from 'react';
 
-const Features = () => {
+function Feature({ iconClass, title, description }) {
   return (
-    <section className="features">
-    <div className="container">
-        <div className="section-title">
-            <p>Features</p>
-            <h2>Our Accounting is trusted by thousand of companies</h2>
-            <a className="btn-yellow">Learn More<i className="fa-regular fa-arrow-up-right"></i></a>
-        </div>
-        <div className="business-advice">
-            <div className="card">
-                <i className="fa-regular fa-handshake"></i>
-                <h3>Business Advice</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="card">
-             <i className="fa-regular fa-lightbulb"></i>
-                <h3>Startup Business</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="card">
-                <i className="fa-sharp fa-solid fa-chart-column"></i>
-                <h3>Financial Advice</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="card">
-                 <i className="fa-solid fa-box"></i>
-                <h3>Risk Management</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
+    <div className="card">
+      <i className={iconClass}></i>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
-    </section>
-  )
+  );
 }
 
-export default Features
+function Features() {
+  const features = [
+    {
+      iconClass: 'fa-regular fa-handshake',
+      title: 'Business Advice',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      iconClass: 'fa-regular fa-lightbulb',
+      title: 'Startup Business',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      iconClass: 'fa-sharp fa-solid fa-chart-column',
+      title: 'Financial Advice',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    },
+    {
+      iconClass: 'fa-solid fa-box',
+      title: 'Risk Management',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    },
+  ];
+
+  return (
+    <section className="features">
+      <div className="container">
+        <div className="section-title">
+          <p>Features</p>
+          <h2>Our Accounting is trusted by a thousand companies</h2>
+          <a className="btn-yellow">Learn More<i className="fa-regular fa-arrow-up-right"></i></a>
+        </div>
+        <div className="business-advice">
+          {features.map((feature, index) => (
+            <Feature key={index} {...feature} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Features;

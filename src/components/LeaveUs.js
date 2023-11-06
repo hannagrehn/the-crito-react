@@ -47,10 +47,8 @@ const LeaveUs = () => {
                 });
 
                 if (response.status === 200) {
-                    
                     setApiMessage('Message sent!');
                 } else {
-                   
                     setApiMessage('Message not sent, API error :(');
                 }
             } catch (error) {
@@ -64,7 +62,7 @@ const LeaveUs = () => {
             
         } else {
             
-            setApiMessage('Form not submitted - Please enter correct information');
+            setApiMessage('Form not submitted, please enter correct information');
         }
     };
 

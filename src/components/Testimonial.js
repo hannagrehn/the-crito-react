@@ -1,77 +1,76 @@
-import React from 'react'
-import vince from '../components/images/vince1-veras-AJIqZDAUD7A-unsplash.jpg'
-import christina from '../components/images/christina1-wocintechchat-com-PlikkWB79qs-unsplash.jpg'
-import joseph from '../components/images/joseph1-gonzalez-iFgRcqHznqg-unsplash.jpg'
+import React from 'react';
+import vince from '../components/images/vince1-veras-AJIqZDAUD7A-unsplash.jpg';
+import christina from '../components/images/christina1-wocintechchat-com-PlikkWB79qs-unsplash.jpg';
+import joseph from '../components/images/joseph1-gonzalez-iFgRcqHznqg-unsplash.jpg';
 
+const StarRating = () => (
+  <div className="stars">
+    {[1, 2, 3, 4, 5].map((index) => (
+      <i key={index} className="fa-sharp fa-solid fa-star-sharp"></i>
+    ))}
+  </div>
+);
 
+const TestimonialCard = ({ imageSrc, altText, reviewerName, position, reviewText }) => (
+  <div className="testimonial-card">
+    <StarRating />
+    <p>{reviewText}</p>
+    <div className="review-person">
+      <img className="circular-portrait" src={imageSrc} alt={altText} />
+      <div className="review-person-details">
+        <h3>{reviewerName}</h3>
+        <p>{position}</p>
+      </div>
+    </div>
+  </div>
+);
 
 const Testimonial = () => {
+  const testimonials = [
+    {
+      imageSrc: vince,
+      altText: 'Cassandra Warren outdoors in a striped shirt',
+      reviewerName: 'Cassandra Warren',
+      position: 'Business Manager, Dorfus',
+      reviewText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate',
+    },
+    {
+      imageSrc: christina,
+      altText: 'Amanda Tulling sitting on a chair',
+      reviewerName: 'Amanda Tulling',
+      position: 'Senior Developer, Square',
+      reviewText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate',
+    },
+    {
+      imageSrc: joseph,
+      altText: 'Jack Mcdogglas smiling face',
+      reviewerName: 'Jack Mcdogglas',
+      position: 'Key Account Manager, Gobona',
+      reviewText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate',
+    },
+  ];
+
   return (
     <section className="testimonial">
-    <div className="container">
+      <div className="container">
         <div className="section-title">
-            <p>Testimonial</p>
-            <h2>What Our Clients Says</h2>
+          <p>Testimonial</p>
+          <h2>What Our Clients Say</h2>
         </div>
         <div className="testimonial-grid">
-            <div className="testimonial-card">
-                <div className="stars">
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                <div className="review-person">
-                    <img className="circular-portrait" src={vince} alt="Cassandra Warren outdoors in a striped shirt"/>
-                    <div className="review-person-details">
-                        <h3>Cassandra Warren</h3>
-                        <p>Business Manager, Dorfus</p>
-                    </div>
-                </div>
-            </div>
-            <div className="testimonial-card">
-                <div className="stars">
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                <div className="review-person">
-                    <img className="circular-portrait" src={christina} alt="Amanda Tulling sitting on a chair"/>
-                    <div className="review-person-details">
-                        <h3>Amanda Tulling</h3>
-                        <p>Senior Developer, Square</p>
-                    </div>
-                </div>
-            </div>
-            <div className="testimonial-card">
-                <div className="stars">
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                    <i className="fa-sharp fa-solid fa-star-sharp"></i>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                <div className="review-person">
-                    <img className="circular-portrait" src={joseph} alt="Jack Mcdogglas smiling face"/>
-                    <div className="review-person-details">
-                        <h3>Jack Mcdogglas</h3>
-                        <p>Key Account Manager, Gobona</p>
-                    </div>
-                </div>
-            </div>
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} {...testimonial} />
+          ))}
         </div>
         <div className="all-reviews-btn">
-            <button className="btn-black"><span>All Reviews</span><i className="fa-solid fa-arrow-up-right"></i></button>
+          <button className="btn-black">
+            <span>All Reviews</span>
+            <i className="fa-solid fa-arrow-up-right"></i>
+          </button>
         </div>
-    </div>
-</section>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default Testimonial
+export default Testimonial;

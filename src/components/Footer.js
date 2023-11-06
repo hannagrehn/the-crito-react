@@ -50,10 +50,10 @@ const Footer = () => {
         </div>
     </div>
     <div className="social-media">
-        <a href="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></a>
-        <a href="https://x.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
-        <a href="https://instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-        <a href="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+        <a href="https://facebook.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook"></i></a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i></a>
     </div>
 </section> 
 
@@ -61,13 +61,14 @@ const Footer = () => {
 <section className="footer-copyright">
     <div className="container">
         <div className="copyright">
-            <p>&#169 2023 Crito - Consulting Company Inc. All Rights Reserved.</p>
+            <p>&#169; 2023 Crito - Consulting Company Inc. All Rights Reserved.</p>
+           
         </div>
         <div className="social-media">
-            <a href="https://facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i></a>
-            <a href="https://x.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
-            <a href="https://instagram.com/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-            <a href="https://linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
+            <a href="https://facebook.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
 </section>
