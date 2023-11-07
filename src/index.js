@@ -13,6 +13,7 @@ import Digitailization from './components/Digitalization';
 
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -24,7 +25,12 @@ root.render(
         <Route path= '/News' element= { <News />} />
         <Route path= '/NewsDetails' element= {<NewsDetails/>} />
 
+
         <Route path= '/NewsDetails/:id' component= {<Digitailization/>} />
+        <Route path= '/News/:id' componentent= { <NewsDetails />} />
+        <Route path= '/News/:id' element= { <Digitailization />} />
+        <Route path= '/NewsDetails/:id' element= { <Digitailization />} />
+
 
         <Route path= '/*' element={ <NotFound />} />
       </Routes>

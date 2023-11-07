@@ -12,43 +12,63 @@ const greyButtons = [
     { id: 6, type: "grey", text: "Tech", url: "#" }
 ]
 
-function Digitailization() {
+const Digitailization = () => {
 
     const { id } = useParams();
-    const [article, setArticle] = useState({});
+    const [article, setArticle] = useState([]);
 
+
+    
     useEffect(() => {
-        getArticle()
-    }, [id])
 
-    async function getArticle() {
-        if (id !== undefined) {
-            try {
+        const fetchArticle = async () => {
+            const response = await fetch `https://win23-assignment.azurewebsites.net/api/articles/${id}`;
 
-                const URL = `https://win23-assignment.azurewebsites.net/api/articles/${id}`;
+            if (response.status !== 200){
+                console.log(`Helvete: ${response.status} `);
+                return;
+            }
+
+            const data = await response.json();
+            setArticle(data)
+
+        };
+        console.log(article.date)
+
+        fetchArticle();
+
+    }, [id]);
+
+
+
+
+
+    // useEffect(() => {
+    //     getArticle()
+    // }, [id])
+
+    // async function getArticle() {
+    //     if (id !== undefined) {
+    //         try {
+
+    //             const URL = `https://win23-assignment.azurewebsites.net/api/articles/${id}`;
                 
-                const response = await fetch(URL)
+    //             const response = await fetch(URL)
 
-                if (response.status === 200) {
-                    setArticle(await response.json())
-                }
+    //             if (response.status === 200) {
+    //                 setArticle(await response.json())
+    //             }
 
-            } catch (e) { console.warn("It's not working: " + e)}
+    //         } catch (e) { console.warn("It's not working: " + e)}
            
-        }
-    }
+    //     }
+    // }
+
+    // const date = new Date(article.published);
+    // const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    // const thisDate = date.toLocaleDateString('sv-SE', options);
 
    
-
-    const date = new Date(article.published);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-    console.log(article.published)
-
-    const thisDate = date.toLocaleDateString('sv-SE', options);
-
-    console.log(id)
-    console.log(thisDate)
     
 
 
@@ -64,7 +84,7 @@ function Digitailization() {
                             <h2>{article.title}</h2>
 
                             <div className="this-date">
-                                <p>{thisDate}</p>
+                                <p>{article.date}</p>
                                
                                 <div className="yellow-dot"></div>
 
