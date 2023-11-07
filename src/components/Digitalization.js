@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Searchbox from './Searchbox'
 import { useParams } from 'react-router-dom'
 
+
 const greyButtons = [
     { id: 1, type: "grey", text: "Digitalization", url: "#" },
     { id: 2, type: "grey", text: "School", url: "#" },
@@ -12,6 +13,7 @@ const greyButtons = [
 ]
 
 function Digitailization() {
+
     const { id } = useParams();
     const [article, setArticle] = useState({});
 
@@ -22,34 +24,57 @@ function Digitailization() {
     async function getArticle() {
         if (id !== undefined) {
             try {
-                const URL = `https://win23-assignment.azurewebsites.net/api/articles/cb24396b-ae21-4c34-a267-d0cd0600aa6d `
+
+                const URL = `https://win23-assignment.azurewebsites.net/api/articles/${id}`;
+                
                 const response = await fetch(URL)
 
                 if (response.status === 200) {
                     setArticle(await response.json())
                 }
+
             } catch (e) { console.warn("It's not working: " + e)}
+           
         }
     }
 
+   
+
     const date = new Date(article.published);
-    const thisDate = date.toLocaleDateString('sv-SE')
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+    console.log(article.published)
+
+    const thisDate = date.toLocaleDateString('sv-SE', options);
+
+    console.log(id)
+    console.log(thisDate)
+    
+
+
+
+
 
     return (
         <div >
             <div className="container">
-                <div className="news-detailes">
+                <div className="news-details">
                     <div>
                         <div className="Digitailization">
                             <h2>{article.title}</h2>
-                            <div className="d-c-n">
+
+                            <div className="this-date">
                                 <p>{thisDate}</p>
+                               
                                 <div className="yellow-dot"></div>
+
                                 <p>{article.category}</p>
+
                                 <div className="yellow-dot"></div>
                                 <p>{article.author}</p>
+                                
                             </div>
-                            <img src={article.imageUrl} alt="girl" />
+                            <img src={article.imageUrl} alt="helo you" />
                         </div>
 
                         <div className="text-info">
@@ -63,8 +88,8 @@ function Digitailization() {
                                 Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.<br />
                                 Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
                             </p>
-                            <div className="qutation">
-                                <div className="qutations">‟</div>
+                            <div className="quote">
+                                <div className="quotes">‟</div>
                                 <span>
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
                                 </span>
@@ -73,6 +98,7 @@ function Digitailization() {
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. unc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                             </p>
                         </div>
+                        
                         <div className="grey-btns">
                             {
                                 greyButtons.map((button) => (

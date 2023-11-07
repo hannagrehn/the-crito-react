@@ -1610,7 +1610,7 @@ header .container .main-menu .btn-login {
 
 /* NEWS DETAILS */
 
-.container .news-detailes {
+.container .news-details {
   display: flex;
 }
 .container .newsbox {
@@ -1625,18 +1625,18 @@ header .container .main-menu .btn-login {
   width: 550px;
   margin-bottom: 40px;
 }
-.container .newsbox .d-c-n {
+.container .newsbox .this-date {
   font-size: 2rem;
   font-weight: 500;
   display: flex;
   gap: 10px;
   margin-bottom: 50px;
 }
-.container .newsbox .d-c-n .yellow-dot {
+.container .newsbox .this-date .yellow-dot {
   border: 1px solid #F9D783;
   background-color: #F9D783;
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin: 5px 20px 0 20px;
 }
@@ -1649,11 +1649,11 @@ header .container .main-menu .btn-login {
 .container .text-info p {
   color: #191919;
 }
-.container .text-info .qutation {
+.container .text-info .quote {
   display: flex;
   position: relative;
 }
-.container .text-info .qutation span {
+.container .text-info .quote span {
   font-size: 22px;
   font-family: "DM Sans", sans-serif;
   font-style: italic;
@@ -1662,7 +1662,7 @@ header .container .main-menu .btn-login {
   margin-bottom: 80px;
   margin-top: 80px;
 }
-.container .text-info .qutation .qutations {
+.container .text-info .quote .quotes {
   position: absolute;
   top: 30px;
   color: #191919;
@@ -1771,7 +1771,7 @@ header .container .main-menu .btn-login {
   margin-top: 15px;
 }
 .search-box .recent > div p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 .search-box .recent > div p.last {

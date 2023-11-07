@@ -9,6 +9,7 @@ import Service from './views/Service';
 import News from './views/News';
 import NotFound from './views/NotFound';
 import NewsDetails from './views/NewsDetails';
+import Digitailization from './components/Digitalization';
 
 
 
@@ -21,7 +22,10 @@ root.render(
         <Route path='/Contact' element={ <Contact />} />
         <Route path='Service' element={ <Service/>} />
         <Route path= '/News' element= { <News />} />
-        <Route path= 'NewsDetails' element= {<NewsDetails/>} />
+        <Route path= '/NewsDetails' element= {<NewsDetails/>} />
+
+        <Route path= '/NewsDetails/:id' component= {<Digitailization/>} />
+
         <Route path= '/*' element={ <NotFound />} />
       </Routes>
     </BrowserRouter>
