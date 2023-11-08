@@ -1615,22 +1615,21 @@ header .container .main-menu .btn-login {
 }
 .container .news-details {
   margin-top: 110px;
-  margin-bottom: 40px;
   font-family: "DM Sans", sans-serif;
 }
 .container .news-details h2 {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #191919;
   width: 550px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .container .news-details .this-date {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   display: flex;
   gap: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .container .news-details .this-date .yellow-dot {
   border: 1px solid #F9D783;
@@ -1642,6 +1641,7 @@ header .container .main-menu .btn-login {
 }
 .container .news-details img {
   width: 750px;
+  margin-bottom: 50px;
 }
 .container .text-info {
   width: 750px;
@@ -1676,7 +1676,8 @@ header .container .main-menu .btn-login {
 .container .grey-btns {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 100px;
+  padding-top: 30px;
+  margin-bottom: -50px;
 }
 
 
@@ -1713,9 +1714,8 @@ header .container .main-menu .btn-login {
 .search-box {
   width: 400px;
   margin-left: 140px;
-  margin-top: 300px;
+  margin-top: 230px;
 
- 
 }
 
 @media (max-width: 1300px){
@@ -1731,7 +1731,7 @@ header .container .main-menu .btn-login {
 .search-box form input {
   margin-top: 20px;
   background-color: #F3F3F3;
-  padding: 10px 50px;
+  padding: 14px 50px;
   width: 100%;
   border-radius: 25px;
   border: none;
@@ -1741,7 +1741,7 @@ header .container .main-menu .btn-login {
   color: #191919;
   font-size: 1em;
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 25px;
 }
 .search-box .recent {
@@ -1802,7 +1802,7 @@ header .container .main-menu .btn-login {
 }
 .search-box .categories p span {
   margin-left: 8px;
-  color: #a1a1a1;
+  color: #868282;
  
 }
 .search-box .categories p.last {

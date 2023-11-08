@@ -11,7 +11,7 @@ const SignUp = () => {
             <button className="btn-yellow"><span>Subscribe</span><i className="fa-solid fa-arrow-up-right"></i></button>
         </div>
         <div>
-            <img src={wavy}/>
+            <img src={wavy} alt="wavy lines"/>
         </div>
     </div>
     </section>

@@ -14,7 +14,7 @@ const NewsArticle = () => {
         <div className="big-text">
             <a><h1>News & Articles</h1></a>
         </div>
-        <img src={lines}/>
+        <img src={lines} alt=""/>
     </div>
     </section>
   )

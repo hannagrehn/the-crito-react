@@ -26,12 +26,10 @@ const Digitailization = () => {
                         console.log(`Nope: ${response.status}`);
                         return;
                     }
-                    
         
                     const data = await response.json();
                     setArticle(data);
                     
-
                 } catch (error) {
                     console.error("Error fetching article:", error);
                 }
@@ -42,6 +40,7 @@ const Digitailization = () => {
         
 
 
+
     return (
         <>
             <div className="container">
@@ -49,7 +48,6 @@ const Digitailization = () => {
                     <div>
                         <div>
                             <h2>{article.title}</h2>
-
                             <div className="this-date">
                                 <p>{article.date}</p>
                                 <div className="yellow-dot"></div>
@@ -57,7 +55,7 @@ const Digitailization = () => {
                                 <div className="yellow-dot"></div>
                                 <p>{article.author}</p>
                             </div>
-                            <img src={article.imageUrl} alt="helo you" />
+                            <img src={article.imageUrl} alt="alt text här" />
                         </div>
 
                         <div className="text-info">

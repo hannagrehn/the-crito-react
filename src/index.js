@@ -9,8 +9,6 @@ import Service from './views/Service';
 import News from './views/News';
 import NotFound from './views/NotFound';
 import NewsDetails from './views/NewsDetails';
-import Digitailization from './components/Digitalization';
-
 
 
 
@@ -20,18 +18,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={ <Hem/>} />
-        <Route path='/Contact' element={ <Contact />} />
-        <Route path='Service' element={ <Service/>} />
-        <Route path= '/News' element= { <News />} />
-        <Route path= '/NewsDetails' element= {<NewsDetails/>} />
-
-
-        <Route path= '/NewsDetails/:id' component= {<Digitailization/>} />
-        <Route path= '/News/:id' componentent= { <NewsDetails />} />
-        <Route path= '/News/:id' element= { <Digitailization />} />
-        <Route path= '/NewsDetails/:id' element= { <Digitailization />} />
-
-
+        <Route path='/contact' element={ <Contact />} />
+        <Route path='/service' element={ <Service/>} />
+        <Route path= '/news' element= { <News />} />
+        <Route path= '/newsdetails/:id' element={<NewsDetails/>} />
         <Route path= '/*' element={ <NotFound />} />
       </Routes>
     </BrowserRouter>

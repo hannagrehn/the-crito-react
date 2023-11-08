@@ -33,6 +33,7 @@ const OurNews = () => {
           {articles.map((article, index) => (
             <NewsCard
               key={article.id} 
+              id={article.id}
               date={{ day: new Date(article.published).getDate(), month: new Date(article.published).toLocaleString('default', { month: 'short' }) }}
               imageSrc={article.imageUrl}
               category={article.category}
