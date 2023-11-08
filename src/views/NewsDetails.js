@@ -4,12 +4,13 @@ import NewsArticle from '../components/NewsArticle'
 import ArticleNews from '../components/ArticleNews'
 import Footer from '../components/Footer'
 import Digitalization from '../components/Digitalization'
+import NewsDetHeader from '../components/NewsDetHeader'
 
 const NewsDetails = () => {
   return (
     <>
     <Header/>
-    <NewsArticle/>
+    <NewsDetHeader/>
     <Digitalization/>
     <ArticleNews/>
     <Footer/>

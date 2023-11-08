@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Searchbox() {
-    return (
-        <div className="search-box">
+const SearchDate = () => {
+  return (
+    <div className="search-box">
             <form>
                 <div className="magnifying-glass"><i className="fa-regular fa-magnifying-glass"></i></div>
                 <input id="searchbox" type="text" placeholder="Type to search..." />
@@ -40,7 +40,7 @@ function Searchbox() {
                 <p className="last">Education -  <span>14 Posts</span></p>
             </div>
         </div>
-    )
+  )
 }
 
-export default Searchbox
+export default SearchDate

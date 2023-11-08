@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Searchbox from './Searchbox'
+import SearchDate from './SearchDate'
 import { useParams } from 'react-router-dom'
-
 
 const greyButtons = [
     { id: 1, type: "grey", text: "Digitalization", url: "#" },
@@ -15,84 +14,48 @@ const greyButtons = [
 const Digitailization = () => {
 
     const { id } = useParams();
-    const [article, setArticle] = useState([]);
+    const [article, setArticle] = useState({});
 
 
-    
-    useEffect(() => {
+        useEffect(() => {
+            const fetchArticle = async () => {
+                try {
+                    const response = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
+        
+                    if (response.status !== 200) {
+                        console.log(`Nope: ${response.status}`);
+                        return;
+                    }
+                    
+        
+                    const data = await response.json();
+                    setArticle(data);
+                    
 
-        const fetchArticle = async () => {
-            const response = await fetch `https://win23-assignment.azurewebsites.net/api/articles/${id}`;
-
-            if (response.status !== 200){
-                console.log(`Helvete: ${response.status} `);
-                return;
-            }
-
-            const data = await response.json();
-            setArticle(data)
-
-        };
-        console.log(article.date)
-
-        fetchArticle();
-
-    }, [id]);
-
-
-
-
-
-    // useEffect(() => {
-    //     getArticle()
-    // }, [id])
-
-    // async function getArticle() {
-    //     if (id !== undefined) {
-    //         try {
-
-    //             const URL = `https://win23-assignment.azurewebsites.net/api/articles/${id}`;
-                
-    //             const response = await fetch(URL)
-
-    //             if (response.status === 200) {
-    //                 setArticle(await response.json())
-    //             }
-
-    //         } catch (e) { console.warn("It's not working: " + e)}
-           
-    //     }
-    // }
-
-    // const date = new Date(article.published);
-    // const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    // const thisDate = date.toLocaleDateString('sv-SE', options);
-
-   
-    
-
-
-
+                } catch (error) {
+                    console.error("Error fetching article:", error);
+                }
+            };
+        
+            fetchArticle();
+        }, [id]);
+        
 
 
     return (
-        <div >
+        <>
             <div className="container">
                 <div className="news-details">
                     <div>
-                        <div className="Digitailization">
+                        <div>
                             <h2>{article.title}</h2>
 
                             <div className="this-date">
                                 <p>{article.date}</p>
-                               
                                 <div className="yellow-dot"></div>
-
                                 <p>{article.category}</p>
-
                                 <div className="yellow-dot"></div>
                                 <p>{article.author}</p>
-                                
                             </div>
                             <img src={article.imageUrl} alt="helo you" />
                         </div>
@@ -130,11 +93,10 @@ const Digitailization = () => {
                             }
                         </div>
                     </div>
-                    <Searchbox />
-                </div>
+                <SearchDate/>
             </div>
-            
-        </div>
+        </div>   
+        </>
     )
 }
 
