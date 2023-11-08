@@ -21,26 +21,19 @@ const Digitailization = () => {
             const fetchArticle = async () => {
                 try {
                     const response = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`);
-        
                     if (response.status !== 200) {
-                        console.log(`Nope: ${response.status}`);
+                        console.log(`Helvete: ${response.status}`);
                         return;
                     }
-        
                     const data = await response.json();
-                    setArticle(data);
-                    
+                    setArticle(data);                 
                 } catch (error) {
-                    console.error("Error fetching article:", error);
+                    console.error("No article for you:", error);
                 }
             };
-        
             fetchArticle();
         }, [id]);
         
-
-
-
     return (
         <>
             <div className="container">
@@ -55,7 +48,7 @@ const Digitailization = () => {
                                 <div className="yellow-dot"></div>
                                 <p>{article.author}</p>
                             </div>
-                            <img src={article.imageUrl} alt="alt text här" />
+                            <img src={article.imageUrl} alt="" />
                         </div>
 
                         <div className="text-info">

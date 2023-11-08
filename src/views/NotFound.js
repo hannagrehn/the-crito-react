@@ -2,13 +2,15 @@ import React from 'react'
 import Footer from '../components/Footer'
 import {Link} from 'react-router-dom'
 import pic from '../components/images/surprised_pikachu_meme_by_tylermascola_dg0nurt-414w-2x.png'
+import lines from '../components/images/background-wavy-lines.svg'
 
 
 const NotFound = () => {
   return (
     <>
       <div className="notFound">
-      <img src={pic} alt="surprise pikachu"/>
+      <img src={pic} alt="surprise pikachu" className="pic"/>
+      <img src={lines} alt="" className="lines" />
       <h1>404 
         page not found</h1>
       <p>Try go back!</p>
