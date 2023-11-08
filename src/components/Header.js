@@ -16,7 +16,6 @@ const Header = () => {
                 <NavLink to="/">
                     <img id="logotype" src={Logo} alt="crito-logotype" />
                 </NavLink>
-                {/* Hamburger menu button for small screens */}
                 <button className={btnClasses} onClick={toggleMenu}>
                     <i className="fa-solid fa-bars-staggered"></i>
                 </button>
@@ -59,7 +58,7 @@ const Header = () => {
                             <NavLink to="/news">News</NavLink>
                             <NavLink to="/contact">Contact</NavLink>
                         </nav>
-                        <a className="btn-yellow btn-login" href="login.html">
+                        <a className="btn-yellow btn-login" href="index.html">
                             Login <i className="fa-regular fa-arrow-up-right"></i>
                         </a>
                     </div>

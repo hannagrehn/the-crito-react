@@ -180,9 +180,9 @@ html, body {
   height: 120px;
   position: absolute;
   right: 0;
-  top: 430px;
+  top: 420px;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 
@@ -232,7 +232,9 @@ header .container .menu-bars {
   .btn-menu.active {
     color: #f94d1c;
   }
+
     /*  NYA KLICKMENYN */
+    
   nav {
     display: block;
     background: #333333; 
@@ -1492,14 +1494,16 @@ header .container .main-menu .btn-login {
   background-color: #0E1021;
   padding-top: 100px;
   padding-bottom: 90px;
-  border-bottom: 1px solid rgba(112, 112, 112, 0.4196078431);
+  border-bottom: 1px solid #707070;
   position: relative;
   z-index: 0;
+  
 }
 @media (max-width: 992px) {
   .footer {
     padding-top: 0px;
     padding-bottom: 27px;
+    
   }
 }
 .footer .social-media {
