@@ -53,7 +53,7 @@ const LeaveUs = () => {
                 }
             } catch (error) {
                 
-                setApiMessage('Message not sent, Network error :(');
+                setApiMessage('Message not sent, network error :(');
             }
 
             setName('');

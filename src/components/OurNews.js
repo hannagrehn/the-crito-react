@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useContext } from 'react';
 import NewsCard from './NewsCard';
+import { NewsContext } from './contexts/Context';
 
 const OurNews = () => {
-  const [articles, setArticles] = useState([]);
-  const apiUrl = 'https://win23-assignment.azurewebsites.net/api/articles';
-
-  useEffect(() => {
-    fetch(apiUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setArticles(data);
-      })
-      .catch((error) => {
-        console.error('Error fetching articles:', error);
-      });
-  }, []);
+  const articles = useContext(NewsContext);
 
   return (
     <section className="article-and-news">

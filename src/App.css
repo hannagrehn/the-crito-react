@@ -1628,8 +1628,11 @@ header .container .main-menu .btn-login {
 
 /* NEWS DETAILS */
 
+
+
 .container .news-details {
   display: flex;
+  
   
 }
 .container .news-details {
@@ -1749,6 +1752,7 @@ header .container .main-menu .btn-login {
 .search-box {
   width: 400px;
   margin-left: 140px;
+  margin-right: auto;
   margin-top: 230px;
 
 }
