@@ -58,9 +58,11 @@ const Header = () => {
                             <NavLink to="/news">News</NavLink>
                             <NavLink to="/contact">Contact</NavLink>
                         </nav>
-                        <a className="btn-yellow btn-login" href="index.html">
-                            Login <i className="fa-regular fa-arrow-up-right"></i>
-                        </a>
+                        <NavLink to="/notfound">
+                            <button className="btn-yellow btn-login">
+                                Login <i className="fa-regular fa-arrow-up-right"></i>
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
 

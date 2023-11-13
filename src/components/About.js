@@ -13,7 +13,7 @@ const About = () => {
                 <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
             </div>
             <div className="wavy-lines">
-                <img src={lines} className="bg-lines"/>
+                <img src={lines} className="bg-lines" alt=""/>
             </div>
         </div>
         <div className="about-comp-text">

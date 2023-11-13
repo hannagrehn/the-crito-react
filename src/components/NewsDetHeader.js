@@ -13,7 +13,7 @@ const NewsDetHeader = () => {
         <div className="big-text">
             <a><h1>News Details</h1></a>
         </div>
-        <img src={lines}/>
+        <img src={lines} alt=""/>
     </div>
     </section>
   )

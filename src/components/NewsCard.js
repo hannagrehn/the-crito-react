@@ -9,7 +9,7 @@ const NewsCard = ({ id, date, imageSrc, category, title, description }) => (
       <br />
       {date.month}
     </div>
-    <img src={imageSrc} />
+    <img src={imageSrc} alt="news card" />
     <h3>{category}</h3>
     <h2>{title}</h2>
     <p>{description}</p>

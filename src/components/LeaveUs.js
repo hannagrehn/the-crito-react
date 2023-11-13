@@ -52,7 +52,6 @@ const LeaveUs = () => {
                     setApiMessage('Message not sent, API error :(');
                 }
             } catch (error) {
-                
                 setApiMessage('Message not sent, network error :(');
             }
 

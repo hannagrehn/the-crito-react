@@ -3,8 +3,9 @@ import linked from '../components/images/linkedin1-sales-solutions-Mis5fyJi7Q0-u
 import emil from '../components/images/emiliano1-vittoriosi-vEN1bsdSjxM-unsplash.jpg';
 import kobu from '../components/images/kobu1-agency-ipARHaxETRk-unsplash.jpg';
 
+
 const NewsCard = ({ date, imageSrc, altText, category, title, description }) => (
-  <a href="news-detail.html" className="article-and-news-card">
+  <a href="" className="article-and-news-card">
     <div className="date-box">
       <strong>{date.day}</strong>
       <br />
