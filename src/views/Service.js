@@ -9,7 +9,7 @@ const Service = () => {
     <Header/>
     <ServiceHeader/>
     <h1>Service is here!</h1>
-    < Footer/>
+    <Footer/>
     </>
   )
 }

@@ -22,9 +22,6 @@ root.render(
           <Route path='/service' element={<Service />} />
           <Route path='/news' element={<News />} />
           <Route path='/newsdetails/:id' element={<NewsDetails />} />
-          <Route path='/newsdetails/:/*' element={<NotFound />} /> 
-          <Route path='/newsdetails/*' element={<NotFound />} />
-          
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </NewsProvider>

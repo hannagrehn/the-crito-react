@@ -5,7 +5,7 @@ import kobu from '../components/images/kobu1-agency-ipARHaxETRk-unsplash.jpg';
 
 
 const NewsCard = ({ date, imageSrc, altText, category, title, description }) => (
-  <a href="" className="article-and-news-card">
+  <a href="#" className="article-and-news-card">
     <div className="date-box">
       <strong>{date.day}</strong>
       <br />
