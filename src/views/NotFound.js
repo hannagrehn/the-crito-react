@@ -12,7 +12,7 @@ const NotFound = () => {
       <img src={pic} alt="surprise pikachu" className="pic"/>
       <img src={lines} alt="" className="lines" />
       <h1>404 
-       nothing to see here </h1>
+       page not found </h1>
       <p>Try go back!</p>
       <Link to="/" className="btn-black">Go to Beginning <i className="fa-solid fa-arrow-up-right"></i></Link>
       </div>
