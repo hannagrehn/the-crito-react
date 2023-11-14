@@ -1350,6 +1350,7 @@ header .container .main-menu .btn-login {
 .lets-connect .content .small-text a {
   color: #191919;
   text-decoration: none;
+  z-index: 2;
 }
 .lets-connect .content .small-text a.active {
   font-weight: 600;

@@ -9,12 +9,12 @@ const ServiceHeader = () => {
     <div className="content">
         <div className="small-text">
         <NavLink to="/">Home</NavLink>
-            <a className="active">Service</a>
+            <a href="/" className="active">Service</a>
         </div>
         <div className="big-text">
-            <a><h1>Service</h1></a>
+            <div><h1>Service</h1></div>
         </div>
-        <img src={lines}/>
+        <img src={lines} alt=""/>
     </div>
     </section>
   )
