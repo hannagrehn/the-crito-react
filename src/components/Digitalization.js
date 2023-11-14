@@ -11,6 +11,12 @@ const greyButtons = [
     { id: 6, type: "grey", text: "Tech", url: "#" }
 ]
 
+const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
+    return formattedDate;
+};
+
 const Digitailization = () => {
 
     const { id } = useParams();
@@ -42,7 +48,7 @@ const Digitailization = () => {
                         <div>
                             <h2>{article.title}</h2>
                             <div className="this-date">
-                                <p>{article.date}</p>
+                                <p>{formatDate(article.published)}</p>
                                 <div className="yellow-dot"></div>
                                 <p>{article.category}</p>
                                 <div className="yellow-dot"></div>
