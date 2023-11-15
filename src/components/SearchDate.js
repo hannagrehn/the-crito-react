@@ -5,12 +5,12 @@ const SearchDate = () => {
     <div className="search-date container">
             <form>
                 <div className="magnifying-glass"><i className="fa-regular fa-magnifying-glass"></i></div>
-                <input id="searchbox" type="text" placeholder="Type to search..." />
+                <input type="text" placeholder="Type to search..." />
             </form>
 
             <div className="recent">
                 <h3>Recent Posts</h3>
-                <div className="underline"></div>
+                <div className="lines"></div>
                 <div>
                     <article>How To Blow Through Capital At An Incredible Rate</article>
                     <p>Jan 14, 2020</p>
@@ -31,7 +31,7 @@ const SearchDate = () => {
 
             <div className="categories">
                 <h3>Categories</h3>
-                <div className="underline"></div>
+                <div className="lines"></div>
                 <p>Technology - <span>20 Posts</span></p>
                 <p>Freelancing -  <span>07 Posts</span></p>
                 <p>Writing -  <span>16 Posts</span></p>

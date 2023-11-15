@@ -1612,7 +1612,6 @@ header .container .main-menu .btn-login {
   display: flex;
   gap: 10px;
   margin-bottom: 40px;
-  width: 50vw;
   margin-left: 10px;
 }
 .container .news-details .this-date .yellow-dot {
@@ -1710,7 +1709,7 @@ header .container .main-menu .btn-login {
 }
 .search-date form .magnifying-glass {
   color: #191919;
-  font-size: 1em;
+  font-size: 1.1rem;
   position: absolute;
   top: 35px;
   left: 25px;
@@ -1726,7 +1725,7 @@ header .container .main-menu .btn-login {
   margin-top: 40px;
   margin-left: 35px;
 }
-.search-date .recent .underline {
+.search-date .recent .lines {
   border: 1px solid #191919;
   width: 40px;
   margin-bottom: 30px;
@@ -1742,7 +1741,7 @@ header .container .main-menu .btn-login {
   margin-top: 15px;
 }
 .search-date .recent > div p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 15px;
 }
 .search-date .recent > div p.last {
@@ -1759,7 +1758,7 @@ header .container .main-menu .btn-login {
   margin-top: 40px;
   margin-left: 35px;
 }
-.search-date .categories .underline {
+.search-date .categories .lines {
   border: 1px solid #191919;
   width: 40px;
   margin-bottom: 30px;
@@ -1771,9 +1770,9 @@ header .container .main-menu .btn-login {
   margin-bottom: 15px;
 }
 .search-date .categories p span {
-  margin-left: 8px;
+  margin-left: 6px;
   color: #868282;
 }
 .search-date .categories p.last {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
