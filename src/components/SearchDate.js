@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchDate = () => {
   return (
-    <div className="search-box container">
+    <div className="search-date container">
             <form>
                 <div className="magnifying-glass"><i className="fa-regular fa-magnifying-glass"></i></div>
                 <input id="searchbox" type="text" placeholder="Type to search..." />

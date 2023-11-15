@@ -1,22 +1,30 @@
-import React from 'react'
-import paperz from './images/paperz.svg'
-import dorfus from './images/dorfus.svg'
-import martino from './images/martino.svg'
-import square from './images/square.svg'
-import gobana from './images/gobona.svg'
+import React from 'react';
+import paperz from './images/paperz.svg';
+import dorfus from './images/dorfus.svg';
+import martino from './images/martino.svg';
+import square from './images/square.svg';
+import gobana from './images/gobona.svg';
+
+const partnersData = [
+  { id: 1, image: paperz, alt: 'Paperz' },
+  { id: 2, image: dorfus, alt: 'Dorfus' },
+  { id: 3, image: martino, alt: 'Martino' },
+  { id: 4, image: square, alt: 'Square' },
+  { id: 5, image: gobana, alt: 'Gobana' },
+];
 
 const Partners = () => {
   return (
     <section className="partners">
-        <div className="content">
-            <a target="_blank" href="https://paperz.com"><img src={paperz}/></a>
-            <a target="_blank" href="https://dorfus.com"><img src={dorfus}/></a>
-            <a target="_blank" href="https://martino.com"><img src={martino}/></a>
-            <a target="_blank" href="https://square.com"><img src={square}/></a>
-            <a target="_blank" href="https://gobana.com"><img src={gobana}/></a>
-        </div>
+      <div className="content">
+        {partnersData.map((partner) => (
+          <a key={partner.id} href="/">
+            <img src={partner.image} alt={partner.alt} />
+          </a>
+        ))}
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;
